@@ -53,3 +53,28 @@ Examples:
     |                         |        |       | By shoving bog roll down the loo  |
 ```
 - Multiline example tables are identified by a horizontal columns separators, starting with an optional column separator followed by three or more dashes.
+
+### Example Tables Meta Data
+Yadda decorates the example table with some extra fields, which can be accessed from your steps in the normal way.
+```
+Scenario: [case] Scenario
+
+    Given I need to transpile [case]
+    [EcmaScript6.index] When EcmaScript6 at [EcmaScript6.start.line]:[EcmaScript6.start.column]=[EcmaScript6]
+    [EcmaScript5.index] Then EcmaScript5 at [EcmaScript5.start.line]:[EcmaScript5.start.column]=[EcmaScript5]
+
+Where:
+    case             | EcmaScript6              | EcmaScript5
+    -----------------|--------------------------|-------------------------------
+    arrow function   | var r=arr.map((x)=>x*x); | "use strict";
+                     |                          |
+                     |                          | var r = arr.map(function (x) {
+                     |                          |   return x * x;
+                     |                          | });
+    -----------------|--------------------------|-------------------------------
+    template strings | var s=`x=${x}            | "use strict";
+                     | y=${y}`;                 |
+                     |                          | var s = "x=" + x + "\ny=" + y;
+```
+
+
