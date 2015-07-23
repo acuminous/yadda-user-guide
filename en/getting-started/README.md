@@ -10,10 +10,10 @@ Yadda's job is translate arrays of text (often called steps) into a function cal
         'Step 3'
     ];
 
-    var library = new Yadda.Library()
-        .define(/Step (\d+)/, function(number) {
-            console.log('Step', number);
-        });
+    var library = new Yadda.library();
+    library.define(/Step (\\d+)/, function(number) {
+        console.log('Step', number);
+    });
 
     Yadda.createInstance(library).run(steps);
 ```
