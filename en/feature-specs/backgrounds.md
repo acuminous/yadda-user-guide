@@ -11,7 +11,7 @@ Background: Some title
     ----------------
     And yet another step
 ```
-- A feature specification must have zero or one backgrounds.
+- A feature specification may one or zero backgrounds.
 - Background steps are prepended to all scenario steps in the same feature specification.
 - Backgrounds do not support annotations.
 - Backgrounds do not support example tables.
