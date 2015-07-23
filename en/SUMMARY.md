@@ -1,4 +1,3 @@
-* [Release Notes](release-notes/README.md)
 * [Getting Started](getting-started/README.md)
 * [Tutorial](tutorial/README.md)
 * [Using Yadda](usage/README.md)
