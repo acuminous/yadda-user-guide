@@ -14,7 +14,7 @@ constructors for these in the following languages.
 
 We'd be delighted to accept pull requests for more.
 
-The easiest way to change the language used by Yadda's feature parser is to set Yadda.localisation.default to your language of choice, e.g.
+The easiest way to change the language used by Yadda's feature parser is to set ```Yadda.localisation.default``` to your language of choice, e.g.
 
 ```js
 Yadda.localisation.default = Yadda.localisation.French;

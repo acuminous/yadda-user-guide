@@ -1,14 +1,6 @@
-## Tutorial
-Yadda's job is translate lines of text into a function call.
+# Tutorial
 
-    var Yadda = require('yadda');
-    var library = new Yadda.Library().define('Some text', function() {
-        console.log('Hello World');
-    });
-    Yadda.createInstance(library).run('Some text');
-
-
-Running the above from a [Node.js](https://nodejs.org/) shell (after installing Yadda) is the minimum it takes to get Yadda working. However since most people want to use Yadda for automated testing this tutorial demonstrates Yadda with [Node.js](https://nodejs.org/) and [Mocha](http://visionmedia.github.io/mocha/). If you prefer another test runner, see the [examples](https://github.com/acuminous/yadda/tree/master/examples).
+This tutorial demonstrates Yadda with [Node.js](https://nodejs.org/) and [Mocha](http://visionmedia.github.io/mocha/). If you prefer another test runner, see the [examples](https://github.com/acuminous/yadda/tree/master/examples).
 
 ### Start a new node project
 

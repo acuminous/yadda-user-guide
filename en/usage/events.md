@@ -8,18 +8,33 @@ EventBus.instance().on(EventBus.ON_EXECUTE, function(event) {
 });
 
 ```
-The following events are available...
-<table>
-  <tr>
-    <th>Event Name</th><th>Event Data</th>
-  </tr>
-  <tr>
-    <td>ON_SCENARIO</td><td>{ scenario: [ '100 green bottles', 'should 1 green bottle...', ...], ctx: context }</td>
-  </tr>
-  <tr>
-    <td>ON_STEP</td><td>{ step: '100 green bottles...', ctx: context }</td>
-  </tr>
-  <tr>
-    <td>ON_EXECUTE</td><td>{ step: '100 green bottles...', pattern: '/(\d+) green bottles.../', args: ['100'], ctx: context }</td>
-  </tr>
-</table>
+#### ON_SCENARIO
+Fired when the interpreter is about to process a scenario
+```
+{
+  scenario: [
+    '100 green bottles',
+    'should 1 green bottle...'
+  ],
+  ctx: context
+}```
+#### ON_STEP
+Fired when the interpreter is about to process a step
+```
+{
+  step: '100 green bottles...',
+  ctx: context
+}
+```
+#### ON_EXECUTE
+Fired when the interpreter is about to execute the function associated with a step
+```js
+{
+  step: '100 green bottles...',
+  pattern: '/(\d+) green bottles.../',
+  args: [
+    '100'
+  ],
+  ctx: context
+}
+```
