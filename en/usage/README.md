@@ -17,8 +17,8 @@ Yadda.createInstance(library).run(steps);
 Step libraries hold the mapping between strings and functions. The mapping key is a regular expression which can be used to parse parameters from the incoming string
 ```js
 var library = new Yadda.library();
-library.define('Step (\\d+)', function(number) {
-    // Code goes here
+library.define(/Step (\\d+)/, function(number) {
+    console.log('Step', number);
 });
 ```
 
@@ -32,6 +32,7 @@ var library = new Yadda.Library(dictionary);
 library.define('Step $number', function(number) {
     // Code goes here
 });
+```
 
 ## The Feature Parser
 Yadda's most frequent use case is for BDD testing, where instead of arrays of strings users want to supply feature specifications. The FeatureParser converts text based feature specifications into a feature object, whose scenarios and steps can be iterated over and passed to the interpreter.
