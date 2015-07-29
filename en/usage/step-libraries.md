@@ -70,6 +70,7 @@ Scenario: Some title
     First Name,Last Name,Age
     Joe,Bloggs,23
     John,Smith,41
+    --------------
 ```
 ```js
 var dictionary = new Yadda.Dictionary()
