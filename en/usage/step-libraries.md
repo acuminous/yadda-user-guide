@@ -72,12 +72,15 @@ Scenario: Some title
     John,Smith,41
 ```
 ```js
-Yadda.localisation.English.library()
-    .given('some csv $csv', function(csv) {
+var dictionary = new Yadda.Dictionary()
+    .define('csv', /([^\u0000]*)/, csvConverter);
+    
+Yadda.localisation.English.library(dictionary)
+    .given('some csv\n$csv', function(csv) {
         // Code goes here
     });
 ```
-Multiline steps are appended to the preceding single line step.
+Multiline steps are appended to the preceding single line step, and should be used with a dictionary defintion and optional converter.
 
 ### Step Aliases
 ```
