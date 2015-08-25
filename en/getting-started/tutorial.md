@@ -67,6 +67,8 @@ Save it in ```test/steps/bottles-library.js```. If your test runner & code are s
         });
     });
 
+Save it in ```./test.js```.
+
 ### Write the code under test
 
     module.exports = function(bottles) {
@@ -81,12 +83,13 @@ Save it in ```./index.js```. By now your project should have the following layou
     .
     ├── index.js
     ├── package.json
+    ├── test.js
     └── test
         ├── features
         │   └── bottles.feature
-        ├── steps
-        │   └── bottles-library.js
-        └── test.js
+        └── steps
+            └── bottles-library.js
+
 
 ### Run your tests
 
