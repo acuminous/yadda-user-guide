@@ -50,3 +50,7 @@ feature.scenarios.forEach(function(scenario) {
 
 ## Integration With Framework X
 Yadda includes various plugins and examples which help you run BDD tests from your test framework of choice. There are also several open source projects built on top of Yadda making it easier to use. See the [Getting Started](../getting-started) section for more details.
+
+
+
+
