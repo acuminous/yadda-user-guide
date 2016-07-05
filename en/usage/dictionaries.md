@@ -3,7 +3,7 @@ Dictionaries can be used to simplify steps, re-use regular expressions and conve
 
 ## Simple Definitions
 ```js
-var dictionary = new Yadda.dictionary()
+var dictionary = new Yadda.Dictionary()
     .define('gender', /(male|female)/);
 
 var library = Yadda.localisation.English.library(dictionary)
@@ -14,7 +14,7 @@ var library = Yadda.localisation.English.library(dictionary)
 
 ## Nested Definitions
 ```js
-var dictionary = new Yadda.dictionary()
+var dictionary = new Yadda.Dictionary()
     .define('address', '$street, $postcode')
     .define('street', /(\d+) (\w+))
     .define('postcode', /((GIR &0AA)|((([A-PR-UWYZ][A-HK-Y]?[0-9][0-9]?)|(([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRV-Y]))) &[0-9][ABD-HJLNP-UW-Z]{2}))/)
@@ -27,7 +27,7 @@ var library = Yadda.localisation.English.library(dictionary)
 
 ## Converters
 ```js
-var dictionary = new Yadda.dictionary()
+var dictionary = new Yadda.Dictionary()
     .define('num', /(\d+)/, Yadda.converters.integer);
 
 var library = Yadda.localisation.English.library(dictionary)
@@ -44,7 +44,7 @@ function quantity_converter(amount, units, cb) {
     cb(null, { amount: amount, units: units })
 };
 
-var dictionary = new Yadda.dictionary()
+var dictionary = new Yadda.Dictionary()
     .define('quantity', /(\d+) (\w+)/, quantity_converter);
 
 var library = Yadda.localisation.English.library(dictionary)
