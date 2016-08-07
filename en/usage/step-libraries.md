@@ -75,7 +75,7 @@ Scenario: Some title
 ```js
 var dictionary = new Yadda.Dictionary()
     .define('csv', /([^\u0000]*)/, csvConverter);
-    
+
 Yadda.localisation.English.library(dictionary)
     .given('some csv\n$csv', function(csv) {
         // Code goes here
@@ -104,3 +104,41 @@ new Yadda.Library()
 ```
 Steps without a function are skipped.
 
+### Synchronous, Asynchronous or Promises
+Yadda will make a decision on whether a step is sychronous or asynchronous based on the number of arguments to the step function. If the number of arguments match the number of step parameters, then the step is deemed to be synchronous. If there is one more argument than step parameter, then the step is deemed asynchronous and Yadda will supply a callback. If your step function returns a 'thenable' object, Yadda will assume it is a promise and invoke the ```then``` function.
+
+#### Synchronous Step
+```js
+Yadda.localisation.English.library()
+    .given('a user called $name', function(name) {
+        // Code goes here
+    });
+```
+#### Asynchronous Step
+```js
+Yadda.localisation.English.library()
+    .given('a user called $name', function(name, next) {
+        // Code goes here
+        next()
+    });
+```
+#### Promise Based Step
+```js
+Yadda.localisation.English.library()
+    .given('a user called $name', function(name) {
+        return new Promise(function(resolve, reject) {
+            // Code goes here
+        })
+    }
+    });
+```
+#### Variadic Step
+Occaisionally you may want to use variadic steps, in which case Yadda may not be able to determine whether the function is synchronous, asynchronous or promise based. In this case specify the step mode using the options parameter
+
+```js
+Yadda.localisation.English.library()
+    .given('a user called $name', function() {
+        // Code goes here
+        arguments[arguments.length - 1]()
+    }, {}, { mode: 'async' });
+```
