@@ -6,4 +6,5 @@ If you intend to use Yadda for functional web testing then we recommend reviewin
 * [mimik](https://www.npmjs.com/package/mimik) - Mimik is a behavior-driven testing framework and UI automation platform.
 * [massah](https://www.npmjs.com/package/massah) - Making BDD style automated browser testing with Node.js very simple.
 * [y2nw](https://www.npmjs.com/package/y2nw) - Yadda to [NightWatch](http://nightwatchjs.org) integration
+* [ya-done](https://www.npmjs.com/package/ya-done) - A ready to use yadda - selenium-webdriver - chai framework
 
