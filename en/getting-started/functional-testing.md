@@ -7,4 +7,5 @@ If you intend to use Yadda for functional web testing then we recommend reviewin
 * [massah](https://www.npmjs.com/package/massah) - Making BDD style automated browser testing with Node.js very simple.
 * [y2nw](https://www.npmjs.com/package/y2nw) - Yadda to [NightWatch](http://nightwatchjs.org) integration
 * [ya-done](https://www.npmjs.com/package/ya-done) - A ready to use yadda - selenium-webdriver - chai framework
+* [ya-done-appium](https://www.npmjs.com/package/ya-done-appium) - Ready to use yadda BBD test framework with appium and chai
 
