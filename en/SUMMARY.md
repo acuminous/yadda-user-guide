@@ -10,7 +10,7 @@
     * [Events](usage/events.md)
     * [Localisation](usage/localisation.md)
 * [Feature Specifications](feature-specs/README.md)
-    * [Features](feature-specs/features.md)]
+    * [Features](feature-specs/features.md)
     * [Scenarios](feature-specs/scenarios.md)
     * [Steps](feature-specs/steps.md)
     * [Annotations](feature-specs/annotations.md)
