@@ -17,7 +17,7 @@ To access annotations programatically
 ```js
 var feature = new Yadda.parsers.FeatureParser().parse(specification)
 // Annotations are converted to lowercase by the parser
-if (feature.annotation.pending) {
+if (feature.annotations.pending) {
     // Do stuff
 }
 ```
